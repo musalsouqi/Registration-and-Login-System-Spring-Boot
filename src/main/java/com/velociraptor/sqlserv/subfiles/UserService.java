@@ -1,4 +1,4 @@
-package com.velociraptor.sqlserv;
+package com.velociraptor.sqlserv.subfiles;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

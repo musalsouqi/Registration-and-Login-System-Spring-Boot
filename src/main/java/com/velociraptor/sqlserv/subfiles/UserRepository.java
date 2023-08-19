@@ -1,4 +1,5 @@
-package com.velociraptor.sqlserv;
+package com.velociraptor.sqlserv.subfiles;
+
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
