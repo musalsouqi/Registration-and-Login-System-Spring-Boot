@@ -1,6 +1,7 @@
-package com.velociraptor.sqlserv.subfiles;
+package com.velociraptor.sqlserv.user;
 
 
+import com.velociraptor.sqlserv.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User, Long> {

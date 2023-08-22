@@ -1,7 +1,7 @@
-package com.velociraptor.sqlserv.controller;
+package com.velociraptor.sqlserv.user;
 
-import com.velociraptor.sqlserv.subfiles.User;
-import com.velociraptor.sqlserv.subfiles.UserRepository;
+import com.velociraptor.sqlserv.user.User;
+import com.velociraptor.sqlserv.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

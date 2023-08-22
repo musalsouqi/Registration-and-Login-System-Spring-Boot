@@ -1,5 +1,7 @@
-package com.velociraptor.sqlserv.subfiles;
+package com.velociraptor.sqlserv.user;
 
+import com.velociraptor.sqlserv.user.User;
+import com.velociraptor.sqlserv.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.velociraptor.sqlserv.subfiles;
+package com.velociraptor.sqlserv.user;
 import jakarta.persistence.*;
 
 @Entity
