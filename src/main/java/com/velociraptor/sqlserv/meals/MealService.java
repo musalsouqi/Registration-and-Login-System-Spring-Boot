@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
+
 @Service
 public class MealService {
 
@@ -22,5 +23,9 @@ public class MealService {
         return mealRepository.save(meal);
     }
 
-    // Add more service methods as needed
+    public List<Meal> getMealsByUsernameAndDate(String username, String date) {
+        return mealRepository.findByUsernameAndDate(username, date);
+    }
+
+    // ...
 }

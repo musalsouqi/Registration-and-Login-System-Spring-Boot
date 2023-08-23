@@ -21,14 +21,21 @@ public class Meal {
     @Column(name = "mealcal")
     private int mealCal;
 
+    @Column(name = "date")
+    private String date;
+
+    public String getDate() {
+        return date;
+    }
     public Meal() {
     }
 
-    public Meal(String mealName, String mealType, int mealCal, String username) {
+    public Meal(String mealName, String mealType, int mealCal, String username, String date) {
         this.mealName = mealName;
         this.mealType = mealType;
         this.mealCal = mealCal;
         this.username = username;
+        this.date = date;
     }
 
     public String getusername() {

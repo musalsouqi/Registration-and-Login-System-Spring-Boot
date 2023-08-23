@@ -40,19 +40,4 @@ public class UserController {
 
         return ResponseEntity.ok("Registration successful");
     }
-    @PostMapping("/api/register2")
-    public ResponseEntity<String> register2(
-            @RequestParam String username,
-            @RequestParam String password,
-            @RequestParam String email) {
-        User existingUser = userRepository.findByUsername(username);
-        if (existingUser != null) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Username already exists");
-        }
-
-        User newUser = new User(username, password, email);
-        userRepository.save(newUser);
-
-        return ResponseEntity.ok("Registration successful");
-    }
 }

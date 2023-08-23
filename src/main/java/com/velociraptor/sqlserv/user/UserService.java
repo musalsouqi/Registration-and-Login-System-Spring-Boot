@@ -17,14 +17,12 @@ public class UserService {
     }
 
     public User createUser(User user) {
-        // Implement your business logic here
-        // For example, perform validation before saving the user
+
         return userRepository.save(user);
     }
 
     public List<User> getAllUsers() {
-        // Implement your business logic here
-        // For example, you can add some additional processing
+
         return userRepository.findAll();
     }
 
