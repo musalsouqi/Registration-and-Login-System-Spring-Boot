@@ -27,5 +27,4 @@ public class MealService {
         return mealRepository.findByUsernameAndDate(username, date);
     }
 
-    // ...
 }

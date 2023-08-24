@@ -15,7 +15,6 @@ public class MealController {
     @Autowired
     private MealService mealService;
 
-    // ... Other controller endpoints ...
 
     @PostMapping("/api/addmeal")
     public ResponseEntity<String> addMeal(
@@ -26,7 +25,7 @@ public class MealController {
             @RequestParam String date) {
         int newMealCal = Integer.parseInt(mealCal);
 
-        Meal newMeal = new Meal(mealName, mealType,newMealCal,username,date);
+        Meal newMeal = new Meal(username, mealName,mealType,newMealCal,date);
 
         mealService.addMeal(newMeal);
 
@@ -37,7 +36,7 @@ public class MealController {
     public ResponseEntity<List<Meal>> getMeal(
             @RequestParam String username,
             @RequestParam String date) {
-        List<Meal> meals = mealService.getMealsByUsernameAndDate(username, date); // Use service method
+        List<Meal> meals = mealService.getMealsByUsernameAndDate(username, date);
         return ResponseEntity.ok(meals);
     }
 
