@@ -33,11 +33,16 @@ public class MealController {
     }
 
     @PostMapping("/api/getmeal")
-    public ResponseEntity<List<Meal>> getMeal(
+    public ResponseEntity<MealResponse> getMeal(
             @RequestParam String username,
             @RequestParam String date) {
         List<Meal> meals = mealService.getMealsByUsernameAndDate(username, date);
-        return ResponseEntity.ok(meals);
+
+        // Create a MealResponse object and wrap the list of meals
+        MealResponse mealResponse = new MealResponse(meals);
+
+        // Return the response with the "data" key
+        return ResponseEntity.ok(mealResponse);
     }
 
 
